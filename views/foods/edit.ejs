@@ -1,0 +1,18 @@
+<!-- views/foods/edit.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Item</title>
+</head>
+<body>
+  <%- include('../partials/_navbar') %>
+  <h1>Edit Item</h1>
+  <form action="/users/<%= user._id %>/foods/<%= item._id %>?_method=PUT" method="POST">
+    <label for="name">Item Name:</label>
+    <input type="text" id="name" name="name" value="<%= item.name %>" required />
+    <button type="submit">Update Item</button>
+  </form>
+</body>
+</html>
